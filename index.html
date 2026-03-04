@@ -594,7 +594,7 @@ async function submitForm() {
     document.getElementById('loading').classList.remove('visible');
     if (res.ok) {
       document.getElementById('step-' + current).classList.remove('active');
-      document.getElementById('thankyou').classList.add('visible');
+      const ty = document.getElementById('thankyou'); ty.style.display = 'flex'; ty.style.flexDirection = 'column'; ty.style.alignItems = 'center';
       document.querySelector('.step-dots').style.display = 'none';
       document.querySelector('.progress-wrap').style.display = 'none';
       window.scrollTo({top: 0, behavior: 'smooth'});
